@@ -1,0 +1,32 @@
+.homepage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 5px;
+  text-align: center;
+
+  h2 {
+    // color: #ed1e24 !important;
+    // max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .plain {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  .fancy {
+    color: #ed1e24 !important;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  .plain:hover, .fancy:hover {
+    text-decoration-line: underline;
+    color: red;
+  }
+
+}

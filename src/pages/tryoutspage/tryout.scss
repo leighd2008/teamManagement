@@ -1,0 +1,92 @@
+.tryouts {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  vertical-align: middle;
+  background-image: url("../../assets/ash-background-beautiful-216640.png");
+  background-attachment: fixed !important;
+  background-size: cover;
+  position: relative;
+  display: table;
+  width: 100vw;
+  height: 40vh;
+  background-repeat: no-repeat !important;
+  background-position: center top !important;
+  // background-size: auto;
+  background-color: transparent !important;
+
+  .card, .card-body {
+    width: 100vw !important;
+  }
+
+  h3 {
+    color: white;
+    text-shadow:none;
+    max-width: 700px;
+    margin: 0 auto;
+    
+  }
+
+  h2 {
+    color: #ed1e24 !important;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+
+  h1 {
+    color: #ed1e24 !important;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    font-size: 3rem;
+    font-weight: 600;
+    max-width: 700px;
+  }
+}
+
+@media screen and (min-width: 450px) {
+  .tryouts {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    vertical-align: middle;
+    background-image: url("../../assets/ash-background-beautiful-216640.png");
+    background-attachment: fixed !important;
+    background-size: cover;
+    position: relative;
+    display: table;
+    width: 86.5vw !important;
+    height: 40vh;
+    background-repeat: no-repeat !important;
+    background-position: center top !important;
+    // background-size: auto;
+    background-color: transparent !important;
+
+    .card, .card-body {
+      width: 86.5vw !important;
+    }
+
+    h3 {
+      color: white;
+      text-shadow:none;
+      max-width: 700px;
+      margin: 0 auto;
+      
+    }
+
+    h2 {
+      color: #ed1e24 !important;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+
+    h1 {
+      color: #ed1e24 !important;
+      text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+      font-size: 4rem;
+      font-weight: 600;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+  } 
+} 

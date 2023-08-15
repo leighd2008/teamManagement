@@ -1,0 +1,39 @@
+.adminPage {
+  width: 95% !important;
+  margin-bottom: 20px;
+
+  .adminLinks {
+    text-align: left;
+    margin: 0 !important;
+    padding: 0;
+    width: 80vw;
+  }
+
+  
+}
+
+h4:hover {
+    text-decoration-line: underline;
+    color: red;
+  }
+
+h4 {
+  color: #ed1e24 !important;
+}
+
+@media only screen and (min-width: 450px) {
+  .adminPage {
+    display: flex;
+    width: 95% !important;
+    margin-bottom: 20px;
+
+  .adminLinks {
+    text-align: left;
+    margin: 0 !important;
+    padding: 0;
+    width: 30vw;
+  }
+
+}
+
+}

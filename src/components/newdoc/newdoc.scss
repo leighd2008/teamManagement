@@ -1,0 +1,41 @@
+.newdoc {
+  color: red;
+  position: relative;
+
+  .plain {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  h3 {
+    color: #ed1e24 !important;
+  }
+
+  a:hover {
+    text-decoration-line: underline;
+    color: red;
+  }
+
+  padding: 0;
+  height: 180px;
+  text-align: center;
+  cursor: pointer;
+  border: 5px solid #ed1e24;
+  margin-bottom: 20px;
+
+}
+
+@media screen and (min-width: 450px) {
+  .newdoc {
+    height: 150px;
+    width: 100% !important;
+    max-width: 1026px;
+    margin-bottom: 20px;
+
+  }
+}

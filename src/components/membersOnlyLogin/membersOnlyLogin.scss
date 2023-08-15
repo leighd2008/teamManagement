@@ -1,0 +1,46 @@
+.login {
+  width: 80vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 5px solid #ed1e24;
+  padding: 20px;
+  margin: auto;
+
+  .members-only {
+    color: #ed1e24 !important;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    margin: 0;
+    padding: 20px;
+    width: 60%;
+  }
+
+  .group {
+    margin: 0 auto;
+    display: flex !important;
+    flex-direction: row;
+  }
+
+  .input {
+    width: 50%;
+    display: flex !important;
+    flex-direction: row;
+  }
+  .password-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 14px;
+
+  }
+  i {
+    position: absolute;
+    top: 35%;
+    left: 95%;
+  }
+  i:hover {
+    color: #ed1e24;
+    cursor: pointer;
+  }
+}
+

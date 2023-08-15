@@ -1,0 +1,31 @@
+.banner {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border: 5px solid #ed1e24;
+
+  .jumbotron {
+    padding: 0px !important;
+    background: no-repeat;
+    background-size: contain !important;
+    background-color: hsla(0, 0%, 100%, 0) !important;
+    background-position: center;
+    width: 80vw;
+    height: 50vw;
+    border: none;
+    max-height: 600px;
+    max-width: 950px;
+    min-width: 350px;
+    margin: auto;
+  }
+
+  h1,
+  .banner-title {
+    color: #ed1e24 !important;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    margin: auto;
+    font-size: 3rem;
+    font-weight: 600;
+  }
+}

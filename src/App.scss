@@ -1,0 +1,30 @@
+body {
+  font-family: "Open Sans Condensed", sans-serif;
+  padding: 20px 5px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration-line: underline;
+  color: red;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 450px) {
+  body {
+    font-family: "Open Sans Condensed", sans-serif;
+    padding: 20px 60px;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+}

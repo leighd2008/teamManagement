@@ -1,0 +1,23 @@
+.upload {
+  display: flex;
+  flex-direction: column;
+
+  .file {
+    width: 100px;
+  }
+
+  .uploadFirebase {
+    width: 89px;
+  }
+
+  .uploadFirebase:enabled {
+    background-color: #ed1e24
+  }
+
+  .custom-file-upload {
+    border: 5px solid #ed1e24;
+    display: inline-block;
+    padding: 2px 2px;
+    cursor: pointer; 
+  }
+}

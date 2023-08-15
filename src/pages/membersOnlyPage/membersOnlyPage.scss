@@ -1,0 +1,39 @@
+.members-only {
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  // margin: 10px;
+
+  h1 {
+    color: #ed1e24 !important;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    margin: auto;
+  }
+
+  .fa-check-circle {
+    font-size: 24px;
+    color: #1cc705
+  }
+
+  img {
+    max-width: 60px !important;
+    // height: 50px;
+  }
+
+  .sticky-table-table {
+    white-space: pre-wrap !important;
+    width: 100%;
+  }
+
+  .table-container {
+    height: 200%;
+    border-top: 5px solid #ed1e24;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    
+    width: 100%; 
+  }
+
+
+}

@@ -1,0 +1,14 @@
+.teampage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 5px;
+
+  h1 {
+    color: #ed1e24 !important;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    margin: auto;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+}

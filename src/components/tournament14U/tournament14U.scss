@@ -1,0 +1,56 @@
+.tournament14u {
+  color: red;
+  position: relative;
+
+  .plain {
+    color: grey;
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  .fancy {
+    color: #ed1e24 !important;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    font-size: 2rem;
+    font-weight: 600;
+    // padding: 0em 4em;
+  }
+
+  a:hover {
+    text-decoration-line: underline;
+    color: red;
+  }
+  
+  padding: 0;
+  height: 200px;
+  text-align: center;
+  cursor: pointer;
+  border: 5px solid #ed1e24;
+  margin: 0 0 20px 0;
+
+}
+
+@media screen and (min-width: 450px) {
+  .tournament14u {
+    height: 150px;
+    width: 100% !important;
+    max-width: 1026px;
+    margin-bottom: 20px;
+
+    .plain {
+      color: grey;
+      margin: 0;
+      font-size: 2rem;
+      font-weight: 600;
+    }
+
+    .fancy {
+      color: #ed1e24 !important;
+      text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+      font-size: 2rem;
+      font-weight: 600;
+      padding: 0em 4em;
+    }
+  }
+}

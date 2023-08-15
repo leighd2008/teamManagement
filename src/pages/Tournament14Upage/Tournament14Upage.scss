@@ -1,0 +1,67 @@
+.battleInTheBurg {
+  color: red;
+  position: relative;
+  min-width: 100%;
+  // height: 80vh;
+  flex: 1 1 auto;
+  display: block;
+  justify-content: center;
+  margin: 0 7.5px 15px;
+  overflow: hidden;
+  padding: 0 20px;
+  text-align: center;
+
+  .plain {
+    color: grey;
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  .fancy {
+    color: #ed1e24 !important;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    font-size: 3rem;
+    font-weight: 400;
+  }
+  
+  .information {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .info-box {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+  }
+
+  .red {
+     color: #ed1e24;
+   }
+
+  .grey {
+    color: grey;
+  }
+}
+
+@media screen and (min-width: 450px) {
+  .battleInTheBurg {
+    max-width: 1020px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content {
+    margin: 0 auto;
+  }
+
+  .info-box {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+  }
+}

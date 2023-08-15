@@ -1,0 +1,15 @@
+.slide-arrow {
+	color:  #ed1e24;
+	cursor: pointer;
+	font-size: 3rem !important;
+	position: relative;
+	top: 35%;
+}
+
+.slide-arrow.right {
+	right: 3rem !important;
+}
+
+.slide-arrow.left {
+	left: 3rem !important;
+}

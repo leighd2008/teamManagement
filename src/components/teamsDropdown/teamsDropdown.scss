@@ -1,0 +1,30 @@
+.teams-dropdown {
+  position: absolute;
+  width: 120px;
+  height: 230px;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  border: none;
+  background-color: white;
+  z-index: 5;
+
+  .teams {
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    margin: 0px 0 0 0;
+
+  }
+  
+  h4 {
+    margin: 0 !important;
+    color: black;
+  }
+
+  h4:hover {
+    text-decoration-line: underline;
+    color: red;
+  }
+
+}

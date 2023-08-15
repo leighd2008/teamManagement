@@ -1,0 +1,26 @@
+.team-events {
+  margin: 20px;
+  width: 100%;
+
+
+  .events {
+    th {
+      color: #ed1e24 !important;
+      text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    }
+
+    a {
+      color: #ed1e24;
+      font-size: 2rem;
+      font-weight: 400;
+    }
+  }
+
+  .card {
+    background-color: #6c757db0 !important;
+    border: 5px solid #6c757d !important;
+    // border: none !important;
+    width: 100%;
+    margin: auto !important;
+  }
+}

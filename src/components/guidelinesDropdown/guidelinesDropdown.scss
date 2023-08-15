@@ -1,0 +1,30 @@
+.guidelines-dropdown {
+  position: absolute;
+  width: 150px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  border: none;
+  background-color: white;
+  z-index: 5;
+
+  .guidelines {
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    margin: 0px 0 0 0;
+
+    a {
+      margin: 0 !important;
+      color: black !important;
+      text-decoration: none;
+    }
+  }
+
+    h4:hover {
+      text-decoration-line: underline;
+      color: red;
+    }
+
+}

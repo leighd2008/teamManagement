@@ -1,0 +1,53 @@
+.footer {
+  background-color: #ed1e24;
+  height: 150px;
+  margin-top: 25px;
+  width: 100%;
+  color: white;
+  text-align: center;
+
+  a {
+    color: black;
+    font-size: 2rem;
+    font-weight: 400;
+  }
+
+  a:hover {
+    text-decoration-line: underline;
+    color: black;
+  }
+
+  & h1 {
+    color: white !important;
+  }
+
+  h2 {
+    font-size: large;
+  }
+}
+
+@media screen and (min-width: 450px) {
+  .footer {
+    background-color: #ed1e24;
+    height: 250px;
+    margin-top: 0px;
+    width: 100%;
+    color: white;
+    text-align: center;
+
+    a:hover {
+      text-decoration-line: underline;
+      color: black;
+    }
+
+    & h1 {
+      color: white;
+      font-size: 4rem;
+      font-weight: 600;
+    }
+
+    h2 {
+      font-size: xx-large;
+    }
+  }
+}
