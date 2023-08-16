@@ -39,9 +39,9 @@ const Tournaments = ({ index, teamData }) => {
           {teamDataArray[index][1].tournaments.map((tournament, i) => {
             return (
               <tr className="stripe-dark" key={i}>
-                <td>{tournament.Weekend}</td>
+                <td>{tournament.weekend}</td>
                 <td>{tournament.name}</td>
-                <td>{tournament.Location}</td>
+                <td>{tournament.location}</td>
               </tr>
             );
           })}
