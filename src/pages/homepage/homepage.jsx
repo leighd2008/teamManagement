@@ -1,18 +1,18 @@
 import React from "react";
 
 import Recruiting from "../../components/recruiting/recruiting";
-import TourneyWins from "../../components/tourneyWins/tourneyWins";
-import Celebrate from "../../components/celebrate/celebrate";
-import Teams from "../../components/all_teams/all_teams";
+// import TourneyWins from "../../components/tourneyWins/tourneyWins";
+// import Celebrate from "../../components/celebrate/celebrate";
+// import Teams from "../../components/all_teams/all_teams";
 
 import "./homepage.scss";
 
 const HomePage = () => (
   <div className="homepage">
-    <TourneyWins />
-    <Celebrate />
+    {/* <TourneyWins /> */}
+    {/* <Celebrate /> */}
     <Recruiting />
-    <Teams />
+    {/* <Teams /> */}
   </div>
 );
 

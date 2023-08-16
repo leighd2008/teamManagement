@@ -14,7 +14,7 @@ import { closeFangearDropdown } from "../../redux/fangearMenu/fangearMenu.action
 import { closeGuidelinesDropdown } from "../../redux/guidelinesMenu/guidelinesMenu.actions";
 
 
-import logo from "../../assets/fireBanner.jpg";
+import logo from "../../assets/banner.png";
 
 import "./header.scss";
 

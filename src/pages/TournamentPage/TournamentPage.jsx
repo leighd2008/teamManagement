@@ -1,5 +1,5 @@
 import React from "react";
-import Tournaments from "./Tournaments";
+// import Tournaments from "./Tournaments";
 
 import { Card } from "reactstrap";
 
@@ -17,7 +17,7 @@ const TournamentPage = () => {
         minWidth: "48vw"
       }}
     >
-      <Tournaments index={5} />
+      {/* <Tournaments index={5} />
       <br />
       <Tournaments index={3} />
       <br />
@@ -33,7 +33,7 @@ const TournamentPage = () => {
       <br />
       <Tournaments index={1} />
       <br />
-      
+       */}
     </Card>
   );
 };
