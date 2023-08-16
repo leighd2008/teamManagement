@@ -19,6 +19,7 @@ const Training = ({ trainingVideos, goToVideo, videoIndex }) => {
   return (
     <div className="training">
       <NewDOC />
+      <h4 className="description">We can link to any training videos you have available.</h4>
       <h1 className="training-title"> Training Videos</h1>
       <div className="videodisplay">
         <div className="youtube">

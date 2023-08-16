@@ -30,7 +30,7 @@ import RegisteredPage from "./pages/registeredpage/registeredpage.jsx";
 import PreregisteredPage from "./pages/PreregisteredPage/Preregisteredpage.jsx";
 import TeamRosterPage from "./pages/TeamRosterPage/TeamRosterPage.jsx";
 import MembersOnlyPage from "./pages/membersOnlyPage/membersOnlyPage.jsx";
-import DemetraBiopage from "./pages/demetraBiopage/DemetraBiopage.jsx"
+import TrainerBioPage from "./pages/trainerBioPage/TrainerBioPage.jsx"
 
 
 
@@ -56,7 +56,7 @@ const RegisteredPageWithSpinner = WithSpinner(RegisteredPage);
 const PreregisteredPageWithSpinner = WithSpinner(PreregisteredPage);
 const TeamRosterPageWithSpinner = WithSpinner(TeamRosterPage);
 const MembersOnlyPageWithSpinner = WithSpinner(MembersOnlyPage);
-const DemetraBiopageWithSpinner = WithSpinner(DemetraBiopage);
+const TrainerBioPageWithSpinner = WithSpinner(TrainerBioPage);
 
 
 
@@ -344,7 +344,7 @@ class App extends React.Component {
           />
           <Route
             path="/DOC"
-              render={() => <DemetraBiopageWithSpinner isLoading={loading} />}
+              render={() => <TrainerBioPageWithSpinner isLoading={loading} />}
           />
           <Route path="/Adminpage"
             component={withRouter(() =>
