@@ -5,13 +5,14 @@ import "./fangearDropdown.scss";
 const FangearDropdown = () => (
   <div className="fangear-dropdown">
     <div className="stores">
-      <a
+      <h3>links to online fangear sites</h3>
+      {/* <a
         href="http://sideline.bsnsports.com/schools/ohio/leavittsburg/fire-fastpitch-softball
 "
         rel="noopener noreferrer"
         target="_blank"
       ><h4>BSN Sports</h4>
-      </a>
+      </a> */}
       {/* <a
         href="https://madfishsports.com/team-spirit-wear/fire-fast-pitch-softball/"
         rel="noopener noreferrer"
