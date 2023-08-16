@@ -6,15 +6,15 @@ const Footer = () => {
   return (
     <div className="footer">
       <h1 className="title">Contact Information</h1>
-      <h2>Email: Fire.Fastpitch.Softball@gmail.com</h2>
-      {/* <h2>Phone: 330-980-1366</h2> */}
+      <h2>Email: yourOrganization@email.com</h2>
+      <h2>Phone: XXX-XXX-XXXX</h2>
       <p className="copyright">
-        <a
+        <a className="copyright"
           href="https://leighd2008.github.io/My_Profile/"
           rel="noopener noreferrer"
           target="_blank"
         >
-         Copyright 2022, Diane Leigh{" "}
+         Copyright 2023, Diane Leigh{" "}
         </a>{" "}
       </p>
     </div>

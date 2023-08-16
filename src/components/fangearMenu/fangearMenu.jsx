@@ -13,7 +13,7 @@ const FangearMenu = ({ toggleFangearHidden, closeGuidelinesDropdown, closeTeamDr
     toggleFangearHidden();
     closeGuidelinesDropdown();
   }}>
-    <h2>Fangear</h2>
+    <h2 className="dropdown">Fangear</h2>
     {hidden ? null : <FangearDropdown />}
   </div>
 );

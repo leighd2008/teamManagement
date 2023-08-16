@@ -13,7 +13,7 @@ const GuidelinesMenu = ({ toggleGuidelinesHidden, closeFangearDropdown, closeTea
     closeFangearDropdown();
     toggleGuidelinesHidden();
   }}>
-    <h2>Guidelines</h2>
+    <h2 className="dropdown">Guidelines</h2>
     {hidden ? null : <GuidelinesDropdown />}
   </div>
 );

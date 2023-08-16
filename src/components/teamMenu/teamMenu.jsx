@@ -14,7 +14,7 @@ const TeamMenu = ({ toggleTeamsHidden, closeFangearDropdown, closeGuidelinesDrop
     closeFangearDropdown();
     closeGuidelinesDropdown();
   }}>
-    <h2>TEAMS</h2>
+    <h2 className="dropdown">TEAMS</h2>
     {hidden ? null : <TeamsDropdown />}
   </div>
 );

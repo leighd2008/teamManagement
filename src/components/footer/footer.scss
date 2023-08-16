@@ -6,13 +6,13 @@
   color: white;
   text-align: center;
 
-  a {
-    color: black;
+  .copyright {
+    color: black !important;
     font-size: 2rem;
     font-weight: 400;
   }
 
-  a:hover {
+  .copyright:hover {
     text-decoration-line: underline;
     color: black;
   }

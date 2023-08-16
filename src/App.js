@@ -15,7 +15,6 @@ import TeamPage from "./pages/teamPage/teamPage";
 import SignInPage from "./pages/sign-inpage/sign-inpage";
 import AdminPage from "./pages/adminpage/adminpage";
 import Header from "./components/header/header";
-// import Header from "./components/header_debugging/header";
 
 
 import Footer from "./components/footer/footer";
