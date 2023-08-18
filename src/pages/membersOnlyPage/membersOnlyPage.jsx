@@ -44,15 +44,11 @@ const MembersOnlyPage = ({ title, teamname, index, teamData }) => {
             <Row >
               <Cell>Name</Cell>
               <Cell>Jersey Number</Cell>
-              {/* <Cell>1st Qtr Report Card</Cell> */}
               <Cell>Birth Certificate</Cell>
               <Cell>Address</Cell>
               {/* <Cell>Sizes</Cell> */}
               {/* <Cell>Helmet size</Cell>
               <Cell>Pant size</Cell> */}
-              {/* <Cell>2cnd Qtr Report Card</Cell> */}
-              {/* <Cell>3rd Qtr Report Card</Cell> */}
-              {/* <Cell>4th Qtr Report Card</Cell> */}
             </Row>
             {teamDataArray[index][1].roster.map((player, i) => {
               let playerIndex = i
@@ -60,10 +56,6 @@ const MembersOnlyPage = ({ title, teamname, index, teamData }) => {
                 <Row className="stripe-dark" key={i}>
                   <Cell className="fix">{`${player.name || ''} ${player.last || ''}`}</Cell>
                   <Cell>{`${player.jersey || ''}`}</Cell>
-                  {/* {player.reportCard1 ?
-                    <Cell><FontAwesomeIcon icon={faCheckCircle} ></FontAwesomeIcon></Cell> :
-                    <Cell ><UploadFiles title={title} playerIndex={playerIndex} category='reportCard1' /></Cell>
-                  } */}
                   {player.birthCert ?
                     <Cell><FontAwesomeIcon icon={faCheckCircle} ></FontAwesomeIcon> </Cell> :
                     <Cell><UploadFiles title={title} playerIndex={playerIndex} category='birthCert' /></Cell>
@@ -81,23 +73,10 @@ const MembersOnlyPage = ({ title, teamname, index, teamData }) => {
                     <FontAwesomeIcon icon={faCheckCircle} ></FontAwesomeIcon> :
                     <Pant title={title} playerIndex={playerIndex} />}
                   </Cell> */}
-                  {/* {player.reportCard2 ?
-                    <Cell><FontAwesomeIcon icon={faCheckCircle} ></FontAwesomeIcon></Cell> :
-                    <Cell ><UploadFiles title={title} playerIndex={playerIndex} category='reportCard2' /></Cell>
-                  } */}
-                  {/* {player.reportCard3 ?
-                      <Cell><FontAwesomeIcon icon={faCheckCircle} ></FontAwesomeIcon></Cell> :
-                      <Cell ><UploadFiles title={title} playerIndex={playerIndex} category='reportCard3' /></Cell>
-                    } */}
-                  {/* {player.reportCard4 ?
-                      <Cell><FontAwesomeIcon icon={faCheckCircle} ></FontAwesomeIcon></Cell> :
-                      <Cell ><UploadFiles title={title} playerIndex={playerIndex} category='reportCard4' /></Cell>
-                    } */}
                 </Row>
               )
             }
             )}
-            {/* </tbody> */}
           </StickyTable>
         </div>
       </Card>

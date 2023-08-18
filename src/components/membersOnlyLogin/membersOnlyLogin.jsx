@@ -17,97 +17,74 @@ class MembersOnlyLogin extends React.Component {
 
     this.state = {
       email: "",
-      fffpassword: "",
-      fffpasswordShown: false,
+      familyPassword: "",
+      familyPasswordShown: false,
     };
   }
-
   handleSubmit = async event => {
     event.preventDefault();
-    const { email, fffpassword } = this.state;
-
-    
-
-    
+    const { email, familyPassword } = this.state;
     try {
-      await auth.signInWithEmailAndPassword(email, fffpassword);
+      await auth.signInWithEmailAndPassword(email, familyPassword);
       this.setState({ email: "", password: "" });
-      if (fffpassword === 'Fire12Family') {
-        window.location = 'Fire2012Family' /* 'MembersOnly' */
-      } else if (fffpassword === 'Fire11Family') {
-        window.location = 'Fire2011Family' /* 'MembersOnly' */
-      } else if (fffpassword === 'Fire10Family') {
-        window.location = 'Fire2010Family' /* 'MembersOnly' */
-      } else if (fffpassword === 'Fire09Family') {
-        window.location = 'Fire2009Family' /* 'MembersOnly' */
-      } else if (fffpassword === 'Fire08Family') {
-        window.location = 'Fire2008Family' /* 'MembersOnly' */
-      } else if (fffpassword === 'Fire07Family') {
-        window.location = 'Fire2007Family' /* 'MembersOnly' */
-      } else if (fffpassword === 'Fire16UFamily') {
-        window.location = 'Fire16UFamily' /* 'MembersOnly' */
-      } else if (fffpassword === 'Fire18UFamily') {
-        window.location = 'Fire18UFamily' /* 'MembersOnly' */
+      if (familyPassword === 'Team1Family') {
+        window.location = 'Team1Family' /* 'MembersOnly' */
+      } else if (familyPassword === 'Team2Family') {
+        window.location = 'Team2Family' /* 'MembersOnly' */
+      } else if (familyPassword === 'Team3Family') {
+        window.location = 'Team3Family' /* 'MembersOnly' */
+      } else if (familyPassword === 'Team4Family') {
+        window.location = 'Team4Family' /* 'MembersOnly' */
       }
     } catch (error) {
-      alert('The password you entered does not match our records, please try again.');
+      alert(`The password you entered does not match our records, please try again. ${familyPassword} ${this.state.email}`);
     }
-    
   };
 
   handleChange = event => {
     const { value, name } = event.target;
-    const { fffpassword } = this.state;
+    const { familyPassword } = this.state;
 
     this.setState({ [name]: value });
     this.setState({ email: 'a@a.com'})
-
-    if (fffpassword === 'Fire12Famil') {
-    this.setState({ email: '12@fire.com' })
-    } else if (fffpassword === 'Fire11Famil') {
-      this.setState({ email: '11@fire.com' })
-    } else if (fffpassword === 'Fire10Famil') {
-      this.setState({ email: '10@fire.com' })
-    } else if (fffpassword === 'Fire09Famil') {
-      this.setState({ email: '09@fire.com' })
-    } else if (fffpassword === 'Fire08Famil') {
-      this.setState({ email: '08@fire.com' })
-    } else if (fffpassword === 'Fire07Famil') {
-      this.setState({ email: '07@fire.com' })
-    } else if (fffpassword === 'Fire16UFamil') {
-      this.setState({ email: '16u@fire.com' })
-    } else if (fffpassword === 'Fire18UFamil') {
-      this.setState({ email: '18u@fire.com' })
+//  change email when password is one letter short, or email doesn't change
+    if (familyPassword === 'Team1Famil') {
+    this.setState({ email: 'team1@family.com' })
+    } else if (familyPassword === 'Team2Famil') {
+      this.setState({ email: 'team2@family.com' })
+    } else if (familyPassword === 'Team3Famil') {
+      this.setState({ email: 'Team3@family.com' })
+    } else if (familyPassword === 'Team4Famil') {
+      this.setState({ email: 'team4@family.com' })
     }
-
   };
 
-  togglefffpasswordShown = () => {
-    const { fffpasswordShown } = this.state;
-    this.setState({ fffpasswordShown: !fffpasswordShown });
+  toggleFamilyPasswordShown = () => {
+    const { familyPasswordShown } = this.state;
+    this.setState({ familyPasswordShown: !familyPasswordShown });
   }
 
 
   render() {
-    const { handleChange, handleSubmit, togglefffpasswordShown } = this;
-    const { /*email,*/ fffpassword, fffpasswordShown } = this.state;
+    const { handleChange, handleSubmit, toggleFamilyPasswordShown } = this;
+    const { /*email,*/ familyPassword, familyPasswordShown } = this.state;
 
     return (
       <div className="login">
-        <h1 className="members-only">Fire Fastpitch Family Login</h1>
+        <h1 className="members-only">Family Login</h1>
 
         <form onSubmit={handleSubmit}>
           <div className="password-wrapper">
             <FormInput
-              name="fffpassword"
-              type={fffpasswordShown ? "text" : "password"}
-              autoComplete="fffpassword"
-              value={fffpassword}
+              name="familyPassword"
+              type={familyPasswordShown ? "text" : "password"}
+              autoComplete="familyPassword"
+              value={familyPassword}
               handleChange={handleChange}
               label="password"
               required
             />
-            <i onClick={togglefffpasswordShown}>{eye}</i>
+            <i onClick={toggleFamilyPasswordShown}>{eye}</i>
           </div>
           <CustomButton type="submit"> Log In </CustomButton>
         </form>

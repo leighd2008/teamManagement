@@ -35,7 +35,7 @@ import TrainerBioPage from "./pages/trainerBioPage/TrainerBioPage.jsx"
 
 
 
-import { Fire12URLS, Fire11URLS, Fire10URLS, Fire09URLS, Fire08URLS, Fire07URLS, Fire16UURLS, Fire18UURLS} from "../src/pages/teamPage/events";
+import { Team1URLS} from "../src/pages/teamPage/events";
 import {
   auth,
   createUserProfileDocument,
@@ -151,106 +151,62 @@ class App extends React.Component {
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route
-            path="/Fire18U"
+            path="/Team1"
             component={withRouter(() => 
               (
               <TeamPageWithSpinner
                 isLoading={loading}
-                teamname="Fire 18U"
-                title="Fire18U"
-                eventurls={Fire18UURLS} />
+                teamname="Team 1"
+                title="team1"
+                eventurls={Team1URLS} />
               
             ))}
             />
             <Route
-              path="/Fire16U"
+              path="/Team2"
               component={withRouter(() =>
                 (
                   <TeamPageWithSpinner
                     isLoading={loading}
-                    teamname="Fire 16U"
-                    title="Fire16U"
-                    eventurls={Fire16UURLS} />
+                    teamname="Team 2"
+                    title="team2"
+                    eventurls={Team1URLS} />
                 ))}
             />
             <Route
-              path="/Fire2007"
+              path="/Team3"
               component={withRouter(() =>
               (
                 <TeamPageWithSpinner
                   isLoading={loading}
-                  teamname="Fire 2007"
-                  title="Fire2007"
-                  eventurls={Fire07URLS} />
+                  teamname="Team 3"
+                  title="team3"
+                  eventurls={Team1URLS} />
               ))}
             />
             <Route
-              path="/Fire2008"
+              path="/Team4"
               component={withRouter(() =>
               (
                 <TeamPageWithSpinner
                   isLoading={loading}
-                  teamname="Fire 2008"
-                  title="Fire2008"
-                  eventurls={Fire08URLS} />
-              ))}
-            />
-          <Route
-            path="/Fire2009"
-            component={withRouter(() => 
-              (
-              <TeamPageWithSpinner
-                isLoading={loading}
-                teamname="Fire 2009"
-                title="Fire2009"
-                eventurls={Fire09URLS} />
-            ))}
-            />
-            <Route
-              path="/Fire2010"
-              component={withRouter(() =>
-              (
-                <TeamPageWithSpinner
-                  isLoading={loading}
-                  teamname="Fire 2010"
-                  title="Fire2010"
-                  eventurls={Fire10URLS} />
-              ))}
-            />
-            <Route
-              path="/Fire2011"
-              component={withRouter(() =>
-              (
-                <TeamPageWithSpinner
-                  isLoading={loading}
-                  teamname="Fire 2011"
-                  title="Fire2011"
-                  eventurls={Fire11URLS} />
-              ))}
-            />
-            <Route
-              path="/Fire2012"
-              component={withRouter(() =>
-              (
-                <TeamPageWithSpinner
-                  isLoading={loading}
-                  teamname="Fire 2012"
-                  title="Fire2012"
-                  eventurls={Fire12URLS} />
+                  teamname="Team 4"
+                  title="team4"
+                  eventurls={Team1URLS} />
               ))}
             />
             <Route path="/Tryouts" component={TryoutsPage} />
             {/* <Route path="/Tryouts" component={TryoutsOver} /> */}
             <Route path="/Training" component={TrainingPage} />
             <Route
-              path="/Fire18UFamily"
+              path="/Team1Family"
               component={withRouter(() =>
                 (
                   <MembersOnlyPageWithSpinner
                     isLoading={loading}
-                    teamname="Fire 18U"
-                    title="Fire18U"
-                    index={1}/>
+                    teamname="Team 1"
+                    title="Team1"
+                    index={3}/>
                 ))}
             />
             <Route
