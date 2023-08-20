@@ -10,7 +10,7 @@ import { Card, CardTitle } from "reactstrap";
 
 import "./membersOnlyPage.scss";
 import UploadFiles from "../../components/uploadFiles/uploadFiles";
-import EnterAddress from "../../components/enterAddress/enterAddress"
+// import EnterAddress from "../../components/enterAddress/enterAddress"
 // import TShirt from "../../components/tshirt/tshirt"
 // import Helmet from "../../components/helmet/helmet"
 // import Pant from "../../components/pant/pant"
@@ -60,9 +60,9 @@ const MembersOnlyPage = ({ title, teamname, index, teamData }) => {
                     <Cell><FontAwesomeIcon icon={faCheckCircle} ></FontAwesomeIcon> </Cell> :
                     <Cell><UploadFiles title={title} playerIndex={playerIndex} category='birthCert' /></Cell>
                   }
-                  {player.address ?
+                  {/* {player.address ?
                     <Cell><FontAwesomeIcon icon={faCheckCircle} ></FontAwesomeIcon> </Cell> :
-                    <Cell><EnterAddress title={title} playerIndex={playerIndex} /></Cell>}
+                    <Cell><EnterAddress title={title} playerIndex={playerIndex} /></Cell>} */}
                   {/* <Cell>{player.tshirt_size ?
                     <FontAwesomeIcon icon={faCheckCircle} ></FontAwesomeIcon> :
                     <TShirt title={title} playerIndex={playerIndex} />}

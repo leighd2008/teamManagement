@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 import Registered from "./registered";
@@ -11,7 +12,10 @@ const RegisteredPage = (registeredData) => {
     const registeredDataArray = Object.entries(registeredData);
   return (
     <div>
-      <h4 className="tc">This page displays all registered players, click here to view new registrations for 2022</h4>
+      <h3 className="tc">This page displays all registered players</h3>
+      <NavLink exact to="/Preregistered" activeClassName="selected" title="Registered">
+        <h4 class="tc">click here to view new registrations for 2022</h4>
+      </NavLink>
       <Registered index={2} year={2014} />
       <br />
       <Registered index={1} year={2013} />

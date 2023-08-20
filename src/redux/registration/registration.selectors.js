@@ -1,10 +1,10 @@
 import { createSelector } from "reselect";
 
-const selectRegistration = state => state.registration;
+// const selectRegistration = state => state.registration;
 const selectRegistered = state => state.registration;
 
 export const selectRegistrationData = createSelector(
-  [selectRegistration],
+  [selectRegistered],
   registration => registration.preregistration
 );
 

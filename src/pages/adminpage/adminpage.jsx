@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 import SignInPage from "../sign-inpage/sign-inpage";
 import HomePage from "../homepage/homepage";
-import CoachesContact from "../../components/coachesContact/coachesContact";
+// import CoachesContact from "../../components/coachesContact/coachesContact";
 import ResetTournaments from "../../components/resetTournaments/resetTournaments";
 
 
@@ -60,7 +60,7 @@ const AdminPage = ({ currentUser }) => {
                 </NavLink>
               </div>
             </div>
-            <CoachesContact />
+            {/* <CoachesContact /> */}
           </div>
           {currentUser.role === "admin" ?
             <ResetTournaments/> 

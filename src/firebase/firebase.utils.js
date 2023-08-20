@@ -134,8 +134,8 @@ export const convertCollectionsSnapshotToMap2 = fields => {
   }, {});
 };
 
-export const convertCollectionsSnapshotToMap3 = preregistration2022 => {
-  const transformedCollection = preregistration2022.docs.map(doc => {
+export const convertCollectionsSnapshotToMap3 = preregistrationyyyy => {
+  const transformedCollection = preregistrationyyyy.docs.map(doc => {
     const {
       title,
       players,

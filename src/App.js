@@ -91,7 +91,6 @@ class App extends React.Component {
     });
     const { updateTeams } = this.props;
     const collectionRef1 = firestore.collection("teams");
-
     
     this.unsubscribeFromSnapshot = collectionRef1.onSnapshot(
       async (snapshot) => {
@@ -114,8 +113,7 @@ class App extends React.Component {
     );
 
     const { updatePreregistration } = this.props;
-    const collectionRef3 = firestore.collection("preregistration2022");
-
+    const collectionRef3 = firestore.collection("preregistrationyyyy");
 
     this.unsubscribeFromSnapshot = collectionRef3.onSnapshot(
       async (snapshot) => {
