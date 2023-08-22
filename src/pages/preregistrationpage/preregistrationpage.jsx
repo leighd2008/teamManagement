@@ -351,10 +351,7 @@ const surveyJson = {
 
 function PreregistrationPage (allRegisteredData) {
   let registeredData = allRegisteredData.allRegisteredData
-  let registrationData = allRegisteredData.preregistrationData
-  
-    console.log('registrationData', registrationData)
-    console.log('registeredData', registeredData)
+  // let registrationData = allRegisteredData.preregistrationData
   
   const survey = new Model(surveyJson);
   
@@ -368,7 +365,6 @@ function PreregistrationPage (allRegisteredData) {
     player.year = birthdate.getYear() + 1900;
     
     // let division = player.division;
-    console.log(player)
     
     // eslint-disable-next-line no-restricted-globals
     if (confirm(`Please check your answers and click OK to proceed or Cancel to start over! \n name: ${player.name} ${player.last} \n    travel experience: ${player.experience} years \n ${player.previous ? `previous teams: ${player.previous} \n` : ""} positions: ${player.positions} \n throws: ${player.throws} handed \n bats: ${player.bats} handed \n division: ${player.division} \n DOB: ${player.DOB} \n ${player.email ? `email: ${player.email} \n` : ""} ${player.phone ? `phone: ${player.phone} \n` : ""} parent/guardians: ${player.parent1} phone: ${player.parent1phone} email: ${player.parent1email} \n ${player.parent2 ? `${player.parent2} phone: ${player.parent2phone} email: ${player.parent2email} \n` : ""} tryout session: ${player.session}`)) {

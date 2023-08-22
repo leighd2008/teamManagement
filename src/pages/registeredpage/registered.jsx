@@ -47,8 +47,6 @@ class Registered extends React.Component {
       return teamMembers;
     }
     )
-    console.log(teamMembers)
-    console.log(teamId)
     firestore.collection("teams").doc(teamId).update({
       roster: teamMembers,
     })
@@ -56,18 +54,14 @@ class Registered extends React.Component {
 
   checkboxHandler = (player, id) => (e) => {
     let division = player.division
-    let year = player.year
     let players = this.props.registeredData.Registered.players
     if (e.target.checked) {
       players[id].onTeam = "yes";
     } else {
       players[id].onTeam = "";
     }
-    console.log(this.props.teamData)
     const ID = this.props.registeredData.Registered.id;
     const teamdiv = division
-    console.log(teamdiv)
-    console.log(this.props.teamData[teamdiv])
     const teamId = this.props.teamData[teamdiv].id
     firestore.collection("registered").doc(ID).update({
       players: players,
