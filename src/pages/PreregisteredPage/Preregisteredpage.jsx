@@ -12,27 +12,17 @@ const RegisteredPage = () => {
       <NavLink exact to="/Registered" activeClassName="selected" title="Registered">
         <h4 class="tc">click here to view all registered players</h4>
       </NavLink>
-      <Registered index={2} year={2014} />
+      <Registered index={2} division={'8U'} />
       <br />
-      <Registered index={1} year={2013} />
+      <Registered index={2} division={'10U'} />
       <br />
-      <Registered index={4} year={2012} />
+      <Registered index={2} division={'12U'} />
       <br />
-      <Registered index={3} year={2011}/>
+      <Registered index={1} division={'14U'} />
       <br />
-      <Registered index={0} year={2010}/>
+      <Registered index={4} division={'16U'} />
       <br />
-      <Registered index={0} year={2009}/>
-      <br />
-      <Registered index={0} year={2008}/>
-      <br />
-      <Registered index={0} year={2007}/>
-      <br />
-      <Registered index={0} year={2006}/>
-      <br />
-      <Registered index={0} year={2005}/>
-      <br />
-      <Registered index={0} year={2004}/>
+      <Registered index={3} division={'18U'}/>
       <br />
     </div>
   );

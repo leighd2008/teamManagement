@@ -21,24 +21,23 @@ class Preregistered extends React.Component {
   }
 
   render() {
-    const { registeredData, /*registrationData, index,*/ year } = this.props;
+    const { registeredData, division } = this.props;
     // const registrationDataArray = Object.entries(registrationData);
     const registeredDataArray = Object.entries(registeredData);
     
-    // registrationDataArray[index][1].players.sort((a, b) => new Date(b.DOB) - new Date(a.DOB))
     const divisionDataArray=[]
     registeredDataArray[0][1].players.sort((a, b) => new Date(b.DOB) - new Date(a.DOB))
-    
+   
     registeredDataArray[0][1].players.map((player, i) => {
-      let birthdate = new Date(player.DOB);
-      let birthyear = birthdate.getYear() + 1900;
-      if (player.Reg_year === '2022') {
-        if (year === birthyear ) {
+      if (player.Reg_year === 2023) {
+        if (division === player.division ) {
             player.id=i;
             divisionDataArray.push(player);
           }
         }
+      return null
     })
+    
     
     return (
       <div>
@@ -52,7 +51,7 @@ class Preregistered extends React.Component {
           }}
         >
           <CardTitle tag="h1">
-            {`Preregistered Players: ${year}`}
+            {`Preregistered Players: ${division}`}
             <h4>Click on player's name to view parent contact information</h4>
           </CardTitle>
           <table className="f6 w-100 mw8 center pa4 ma2">

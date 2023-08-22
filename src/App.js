@@ -42,7 +42,7 @@ import {
   firestore,
   convertCollectionsSnapshotToMap,
   convertCollectionsSnapshotToMap2,
-  convertCollectionsSnapshotToMap3,
+  // convertCollectionsSnapshotToMap3,
   convertCollectionsSnapshotToMap4,
 } from "./firebase/firebase.utils";
 import { setCurrentUser } from "./redux/user/user.actions";
@@ -112,16 +112,16 @@ class App extends React.Component {
       }
     );
 
-    const { updatePreregistration } = this.props;
-    const collectionRef3 = firestore.collection("preregistrationyyyy");
+    // const { updatePreregistration } = this.props;
+    // const collectionRef3 = firestore.collection("preregistration");
 
-    this.unsubscribeFromSnapshot = collectionRef3.onSnapshot(
-      async (snapshot) => {
-        const preregistrationMap = convertCollectionsSnapshotToMap3(snapshot);
-        updatePreregistration(preregistrationMap)
-        this.setState({ loading: false });
-      }
-    );
+    // this.unsubscribeFromSnapshot = collectionRef3.onSnapshot(
+    //   async (snapshot) => {
+    //     const preregistrationMap = convertCollectionsSnapshotToMap3(snapshot);
+    //     updatePreregistration(preregistrationMap)
+    //     this.setState({ loading: false });
+    //   }
+    // );
     
     const { updateRegistered } = this.props;
     const collectionRef4 = firestore.collection("registered");

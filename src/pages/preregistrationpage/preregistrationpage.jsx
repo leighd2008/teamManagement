@@ -8,12 +8,18 @@ import { Survey } from 'survey-react-ui';
 import { firestore } from "../../firebase/firebase.utils";
 
 import { createStructuredSelector } from "reselect";
-import { selectRegistrationData } from "../../redux/registration/registration.selectors"
+// import { selectRegistrationData } from "../../redux/registration/registration.selectors"
 import { selectRegisteredData } from "../../redux/registration/registration.selectors";
 
 
 import './preregistrationpage.scss'
-
+const currentMonth = new Date().getMonth
+let currentYear
+if (currentMonth > 8) {
+  currentYear = new Date().getFullYear()
+} else {
+  currentYear = new Date().getFullYear() - 1
+}
 const surveyJson = {
   "pages": [
     {
@@ -140,27 +146,31 @@ const surveyJson = {
           "isRequired": true,
           "choices": [
             {
+              "value": "8U",
+              "text": `8U (DOB: 09/${currentYear - 8} - 08/${currentYear - 6})`
+            },
+            {
               "value": "10U",
-              "text": "10U"
+              "text": `10U (DOB: 09/${currentYear - 10} - 08/${currentYear - 8})`
             },
             {
               "value": "12U",
-              "text": "12U"
+              "text": `12U (DOB: 09/${currentYear - 12} - 08/${currentYear - 10})`
             },
             {
               "value": "14U",
-              "text": "14U"
+              "text": `14U (DOB: 09/${currentYear - 14} - 08/${currentYear - 12})`
             },
             {
               "value": "16U",
-              "text": "16U"
+              "text": `16U (DOB: 09/${currentYear - 16} - 08/${currentYear - 14})`
             },
             {
               "value": "18U",
-              "text": "18U"
+              "text": `18U (DOB: 09/${currentYear - 18} - 08/${currentYear - 16})`
             }
           ],
-          "colCount": 4
+          "colCount": 2
         },
         {
           "type": "text",
@@ -169,8 +179,8 @@ const surveyJson = {
           "isRequired": true,
           "requiredErrorText": "Please enter a valid Date of Birth.",
           "inputType": "date",
-          "min": "2004-01-01",
-          "max": "2015-01-01",
+          "min": `09/01/${currentYear - 18}`,
+          "max": `09/01/${currentYear - 6}`,
           "placeHolder": "mm/dd/yyyy"
         },
         // {
@@ -353,27 +363,27 @@ function PreregistrationPage (allRegisteredData) {
     let player = survey.data;
     player.onTeam = '';
     player.tryout = '';
-    player.Reg_year = 'yyyy';
+    player.Reg_year = new Date().getFullYear();
     let birthdate = new Date(player.DOB);
     player.year = birthdate.getYear() + 1900;
     
-    let division = player.division;
+    // let division = player.division;
     console.log(player)
     
     // eslint-disable-next-line no-restricted-globals
     if (confirm(`Please check your answers and click OK to proceed or Cancel to start over! \n name: ${player.name} ${player.last} \n    travel experience: ${player.experience} years \n ${player.previous ? `previous teams: ${player.previous} \n` : ""} positions: ${player.positions} \n throws: ${player.throws} handed \n bats: ${player.bats} handed \n division: ${player.division} \n DOB: ${player.DOB} \n ${player.email ? `email: ${player.email} \n` : ""} ${player.phone ? `phone: ${player.phone} \n` : ""} parent/guardians: ${player.parent1} phone: ${player.parent1phone} email: ${player.parent1email} \n ${player.parent2 ? `${player.parent2} phone: ${player.parent2phone} email: ${player.parent2email} \n` : ""} tryout session: ${player.session}`)) {
-      let newplayers = [
-        player,
-        ...registrationData[division].players
-      ];
+      // let newplayers = [
+      //   player,
+      //   ...registrationData[division].players
+      // ];
       let newplayers2 = [
         player,
         ...registeredData.Registered.players
       ];
       // const divisionId = registrationData[division].id;
-      firestore.collection("preregistrationyyyy").doc(registrationData[division].id).update({
-        players: newplayers,
-      });
+      // firestore.collection("preregistration").doc(registrationData[division].id).update({
+      //   players: newplayers,
+      // });
       const ID = registeredData.Registered.id;
       firestore.collection("registered").doc(ID).update({
         players: newplayers2,
@@ -399,7 +409,7 @@ function PreregistrationPage (allRegisteredData) {
 
 const mapStateToProps = createStructuredSelector({
   allRegisteredData: selectRegisteredData,
-  preregistrationData: selectRegistrationData
+  // preregistrationData: selectRegistrationData
 })
 
 export default connect(mapStateToProps)(PreregistrationPage);

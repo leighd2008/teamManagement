@@ -34,7 +34,7 @@ class Registered extends React.Component {
     
     players.map((player, i) => {
       
-      if (player.onTeam && teamdiv === `Fire${player.year || player.division}`) {
+      if (player.onTeam && teamdiv === player.division) {
         if (!currentRoster.includes(`${player.name} ${player.last}`)) {
           player.jersey = '';
           teamMembers.push(player)
@@ -47,7 +47,8 @@ class Registered extends React.Component {
       return teamMembers;
     }
     )
-    
+    console.log(teamMembers)
+    console.log(teamId)
     firestore.collection("teams").doc(teamId).update({
       roster: teamMembers,
     })
@@ -62,9 +63,11 @@ class Registered extends React.Component {
     } else {
       players[id].onTeam = "";
     }
-    
+    console.log(this.props.teamData)
     const ID = this.props.registeredData.Registered.id;
-    const teamdiv = `Fire${year || division}`
+    const teamdiv = division
+    console.log(teamdiv)
+    console.log(this.props.teamData[teamdiv])
     const teamId = this.props.teamData[teamdiv].id
     firestore.collection("registered").doc(ID).update({
       players: players,
@@ -73,7 +76,7 @@ class Registered extends React.Component {
   }
 
   render() {
-    const { registeredData, currentUser, year } = this.props;
+    const { registeredData, currentUser, division } = this.props;
     const registeredDataArray = Object.entries(registeredData);
     
     const divisionDataArray=[]
@@ -81,9 +84,7 @@ class Registered extends React.Component {
     
     // eslint-disable-next-line array-callback-return
     registeredDataArray[0][1].players.map((player, i) => {
-      let birthdate = new Date(player.DOB);
-      let birthyear = birthdate.getYear() + 1900;
-      if (year === birthyear ) {
+      if (division === player.division ) {
           player.id=i;
           divisionDataArray.push(player);
         }
@@ -101,7 +102,7 @@ class Registered extends React.Component {
           }}
         >
           <CardTitle>
-          <h1 className='tc'>{`Registered Players: ${year}`}</h1>
+          <h1 className='tc'>{`Registered Players: ${division}`}</h1>
           <h4 className='tc'>Click on player's name to view parent contact information</h4>
           </CardTitle>
           <table className="f6 w-100 mw8 center pa4 ma2">

@@ -134,27 +134,27 @@ export const convertCollectionsSnapshotToMap2 = fields => {
   }, {});
 };
 
-export const convertCollectionsSnapshotToMap3 = preregistrationyyyy => {
-  const transformedCollection = preregistrationyyyy.docs.map(doc => {
-    const {
-      title,
-      players,
-      division,
-    } = doc.data();
+// export const convertCollectionsSnapshotToMap3 = preregistration => {
+//   const transformedCollection = preregistration.docs.map(doc => {
+//     const {
+//       title,
+//       players,
+//       division,
+//     } = doc.data();
 
-    return {
-      routeName: encodeURI(title),
-      id: doc.id,
-      title,
-      players,
-      division,
-    };
-  });
-  return transformedCollection.reduce((accumulator, registration) => {
-    accumulator[registration.title] = registration;
-    return accumulator;
-  }, {});
-};
+//     return {
+//       routeName: encodeURI(title),
+//       id: doc.id,
+//       title,
+//       players,
+//       division,
+//     };
+//   });
+//   return transformedCollection.reduce((accumulator, registration) => {
+//     accumulator[registration.title] = registration;
+//     return accumulator;
+//   }, {});
+// };
 
 export const convertCollectionsSnapshotToMap4 = registered => {
   const transformedCollection = registered.docs.map(doc => {
