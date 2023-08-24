@@ -3,7 +3,6 @@ import { Switch, Route, Redirect, BrowserRouter as Router, withRouter } from "re
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 import { updateTeams } from "./redux/team/team.actions";
-import { updatePreregistration } from "./redux/registration/registration.actions";
 import { updateRegistered } from "./redux/registration/registration.actions";
 import WithSpinner from "./components/with-spinner/with-spinner";
 
@@ -33,7 +32,7 @@ import TrainerBioPage from "./pages/trainerBioPage/TrainerBioPage.jsx"
 
 
 
-import { Team1URLS} from "../src/pages/teamPage/events";
+import { Team1URLS, Team2URLS, Team3URLS, Team4URLS} from "../src/pages/teamPage/events";
 import {
   auth,
   createUserProfileDocument,
@@ -136,7 +135,7 @@ class App extends React.Component {
                     isLoading={loading}
                     teamName="Team 2"
                     title="10U"
-                    eventurls={Team1URLS} />
+                    eventurls={Team2URLS} />
                 ))}
             />
             <Route
@@ -147,7 +146,7 @@ class App extends React.Component {
                   isLoading={loading}
                   teamName="Team 3"
                   title="12U"
-                  eventurls={Team1URLS} />
+                  eventurls={Team3URLS} />
               ))}
             />
             <Route
@@ -158,7 +157,7 @@ class App extends React.Component {
                   isLoading={loading}
                   teamName="Team 4"
                   title="14U"
-                  eventurls={Team1URLS} />
+                  eventurls={Team4URLS} />
               ))}
             />
             <Route path="/Tryouts" component={TryoutsPage} />
