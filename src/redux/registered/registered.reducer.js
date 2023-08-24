@@ -1,5 +1,4 @@
 import RegisteredActionTypes from "./registered.types"
-// import { addEventToSchedule } from "./field.utils";
 
 const INITIAL_STATE = {
   registered: null

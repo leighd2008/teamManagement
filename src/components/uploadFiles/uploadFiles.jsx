@@ -5,7 +5,6 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from "reselect";
 import { selectTeamData } from "../../redux/team/team.selectors";
 
-
 import "./uploadFiles.scss";
 
 const UploadFiles = ({ teamData, title, playerIndex, category }) => {

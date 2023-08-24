@@ -71,9 +71,6 @@ const Training = ({ trainingVideos, goToVideo, videoIndex }) => {
               <li className="videolinks" onClick={goToVideo.bind(this, 4)}>
                 Pitching
               </li>
-              {/* <li className="videolinks" onClick={goToVideo.bind(this, 2)}>
-                Throwing
-              </li> */}
               <li className="videolinks" onClick={goToVideo.bind(this, 5)}>
                 Fielding Fly Balls
               </li>

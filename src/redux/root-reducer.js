@@ -10,14 +10,8 @@ import all_teamsReducer from "./all_teams/all_teams.reducer";
 import teamReducer from "./team/team.reducer";
 import trainingReducer from "./training/training.reducer";
 import recruitingReducer from "./recruiting/recruiting.reducer";
-import eventReducer from "./event/event.reducer";
 import adminReducer from "./admin/admin.reducer";
-
-
-import fieldReducer from "./field/field.reducer";
 import registrationReducer from "./registration/registration.reducer";
-// import registeredReducer from "./registered/registered.reducer";
-
 
 const persistConfig = {
   key: "root",
@@ -34,11 +28,7 @@ const rootReducer = combineReducers({
   team: teamReducer,
   training: trainingReducer,
   recruiting: recruitingReducer,
-  field: fieldReducer,
   registration: registrationReducer,
-//   registered: registeredReducer,
-  
-  event: eventReducer,
   admin: adminReducer,
 });
 

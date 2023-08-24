@@ -108,54 +108,6 @@ export const convertCollectionsSnapshotToMap = teams => {
   }, {});
 };
 
-export const convertCollectionsSnapshotToMap2 = fields => {
-  const transformedCollection = fields.docs.map(doc => {
-    const {
-      title,
-      fieldname,
-      schedule,
-      eventCreator,
-      type,
-    } = doc.data();
-
-    return {
-      routeName: encodeURI(title),
-      id: doc.id,
-      title,
-      fieldname,
-      schedule,
-      eventCreator,
-      type,
-    };
-  });
-  return transformedCollection.reduce((accumulator, field) => {
-    accumulator[field.title] = field;
-    return accumulator;
-  }, {});
-};
-
-// export const convertCollectionsSnapshotToMap3 = preregistration => {
-//   const transformedCollection = preregistration.docs.map(doc => {
-//     const {
-//       title,
-//       players,
-//       division,
-//     } = doc.data();
-
-//     return {
-//       routeName: encodeURI(title),
-//       id: doc.id,
-//       title,
-//       players,
-//       division,
-//     };
-//   });
-//   return transformedCollection.reduce((accumulator, registration) => {
-//     accumulator[registration.title] = registration;
-//     return accumulator;
-//   }, {});
-// };
-
 export const convertCollectionsSnapshotToMap4 = registered => {
   const transformedCollection = registered.docs.map(doc => {
     const {

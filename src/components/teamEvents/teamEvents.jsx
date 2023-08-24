@@ -5,11 +5,11 @@ import Scroll from "../scroll/scroll";
 
 import Events from "./events";
 
-const TeamEvents = ({ eventUrls, teamname, calendarLink }) => {
+const TeamEvents = ({ eventUrls, teamName, calendarLink }) => {
   return (
     <div className="team-events">
       <Card className="ma3 events">
-        <CardTitle tag="h1">{`${teamname} Team Events `}</CardTitle>
+        <CardTitle tag="h1">{`${teamName} Team Events `}</CardTitle>
         <Scroll>
           <Events eventUrls={eventUrls} />
         </Scroll>

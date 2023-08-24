@@ -10,7 +10,6 @@ import { auth } from "../../firebase/firebase.utils";
 import "./membersOnlyLogin.scss";
 const eye = <FontAwesomeIcon icon={faEye} />;
 
-
 class MembersOnlyLogin extends React.Component {
   constructor(props) {
     super(props);
@@ -64,10 +63,9 @@ class MembersOnlyLogin extends React.Component {
     this.setState({ familyPasswordShown: !familyPasswordShown });
   }
 
-
   render() {
     const { handleChange, handleSubmit, toggleFamilyPasswordShown } = this;
-    const { /*email,*/ familyPassword, familyPasswordShown } = this.state;
+    const { familyPassword, familyPasswordShown } = this.state;
 
     return (
       <div className="login">

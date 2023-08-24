@@ -4,7 +4,6 @@ import { createStructuredSelector } from "reselect";
 import CsvDownload from 'react-json-to-csv'
 
 import { selectCurrentUser } from "../../redux/user/user.selectors";
-// import { selectRegistrationData } from "../../redux/registration/registration.selectors";
 import { selectRegisteredData } from "../../redux/registration/registration.selectors";
 
 import { selectTeamData } from "../../redux/team/team.selectors";
@@ -22,7 +21,6 @@ class Preregistered extends React.Component {
 
   render() {
     const { registeredData, division } = this.props;
-    // const registrationDataArray = Object.entries(registrationData);
     const registeredDataArray = Object.entries(registeredData);
     
     const divisionDataArray=[]
@@ -100,7 +98,6 @@ class Preregistered extends React.Component {
 };
 
 const mapStateToProps = createStructuredSelector({
-  // registrationData: selectRegistrationData,
   registeredData: selectRegisteredData,
   teamData: selectTeamData,
   currentUser: selectCurrentUser

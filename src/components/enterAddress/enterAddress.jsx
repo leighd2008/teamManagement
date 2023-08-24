@@ -7,8 +7,6 @@ import { firestore } from "../../firebase/firebase.utils";
 import { createStructuredSelector } from "reselect";
 import { selectTeamData } from "../../redux/team/team.selectors";
 
-// import './enterAddress.scss'
-
 const EnterAddress = ({ teamData, title, playerIndex }) => {
 
 const json = {

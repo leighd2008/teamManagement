@@ -34,29 +34,17 @@ const AdminPage = ({ currentUser }) => {
                 <NavLink exact to="/Registered" activeClassName="selected" title="Registered">
                   <h4>All Registered Players</h4>
                 </NavLink>
-                <NavLink exact to="/18URoster" activeClassName="selected" title="18URoster">
-                  <h4>18U Team Roster</h4>
+                <NavLink exact to="/Team1Roster" activeClassName="selected" title="Team1Roster">
+                  <h4>Team 1 Roster</h4>
                 </NavLink>
-                <NavLink exact to="/16URoster" activeClassName="selected" title="16URoster">
-                  <h4>16U Team Roster</h4>
+                <NavLink exact to="/Team2Roster" activeClassName="selected" title="Team2Roster">
+                  <h4>Team 2 Roster</h4>
                 </NavLink>
-                <NavLink exact to="/2007Roster" activeClassName="selected" title="2007Roster">
-                  <h4>2007 Team Roster</h4>
+                <NavLink exact to="/Team3Roster" activeClassName="selected" title="Team3Roster">
+                  <h4>Team 3 Roster</h4>
                 </NavLink>
-                <NavLink exact to="/2008Roster" activeClassName="selected" title="2008Roster">
-                  <h4>2008 Team Roster</h4>
-                </NavLink>
-                <NavLink exact to="/2009Roster" activeClassName="selected" title="2009Roster">
-                  <h4>2009 Team Roster</h4>
-                </NavLink>
-                <NavLink exact to="/2010Roster" activeClassName="selected" title="2010Roster">
-                  <h4>2010 Team Roster</h4>
-                </NavLink>
-                <NavLink exact to="/2011Roster" activeClassName="selected" title="2011Roster">
-                  <h4>2011 Team Roster</h4>
-                </NavLink>
-                <NavLink exact to="/2012Roster" activeClassName="selected" title="2012Roster">
-                  <h4>2012 Team Roster</h4>
+                <NavLink exact to="/Team4Roster" activeClassName="selected" title="Team4Roster">
+                  <h4>Team 4 Roster</h4>
                 </NavLink>
               </div>
             </div>

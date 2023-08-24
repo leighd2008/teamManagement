@@ -102,9 +102,6 @@ class Registered extends React.Component {
           <table className="f6 w-100 mw8 center pa4 ma2">
             <thead>
               <tr >
-                {/* <th>Tryout Number</th>
-                <th>Attended</th>
-                <th>Session</th> */}
                 <th>Registration year</th>
                 <th>Name</th>
                 <th>Previous Experience</th>
@@ -121,9 +118,6 @@ class Registered extends React.Component {
                 player.positions ? player.positions = player.positions.toString() : player.positions = ''
                 return (
                   <tr className="stripe-dark"  key={i}>
-                    {/* <td>{`${player.tryout || ''}`}</td>
-                    <td>{`${player.attended || ''}`}</td>
-                    <td>{`${player.session || ''}`}</td> */}
                     <td>{`${player.Reg_year || ''}`}</td>
                     <td onClick={(e) => {
                       alert(`${player.name} ${player.last} email: ${player.email || ''} \n ${player.parent1} \n phone: ${player.parent1phone.replace(/(\d{3})(\d{3})(\d{4})/, "($1) $2-$3")} \n email: ${player.parent1email || ''} \n ${player.parent2 || ""}\n phone: ${player.parent2phone ? player.parent2phone.replace(/(\d{3})(\d{3})(\d{4})/, "($1) $2-$3") : ""} \n email: ${player.parent2email || ""} `)

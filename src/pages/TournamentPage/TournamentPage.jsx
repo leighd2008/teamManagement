@@ -5,7 +5,6 @@ import { Card } from "reactstrap";
 
 import './TournamentPage.scss'
 
-
 const TournamentPage = () => {
   return (
     <Card
@@ -25,7 +24,6 @@ const TournamentPage = () => {
       <br />
       <Tournaments index={2} />
       <br />
-      
     </Card>
   );
 };

@@ -3,7 +3,6 @@ import { Switch, Route, Redirect, BrowserRouter as Router, withRouter } from "re
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 import { updateTeams } from "./redux/team/team.actions";
-import { updateFields } from "./redux/field/field.actions";
 import { updatePreregistration } from "./redux/registration/registration.actions";
 import { updateRegistered } from "./redux/registration/registration.actions";
 import WithSpinner from "./components/with-spinner/with-spinner";
@@ -24,7 +23,6 @@ import TryoutsPage from "./pages/tryoutspage/tryout";
 
 import TrainingPage from "./pages/trainingpage/training";
 import TournamentPage from "./pages/TournamentPage/TournamentPage";
-import FieldSchedulerPage from "./pages/fieldSchedulerPage/fieldSchedulerPage"
 import PreregistrationPage from "./pages/preregistrationpage/preregistrationpage.jsx";
 import RegisteredPage from "./pages/registeredpage/registeredpage.jsx";
 import PreregisteredPage from "./pages/PreregisteredPage/Preregisteredpage.jsx";
@@ -41,8 +39,6 @@ import {
   createUserProfileDocument,
   firestore,
   convertCollectionsSnapshotToMap,
-  convertCollectionsSnapshotToMap2,
-  // convertCollectionsSnapshotToMap3,
   convertCollectionsSnapshotToMap4,
 } from "./firebase/firebase.utils";
 import { setCurrentUser } from "./redux/user/user.actions";
@@ -50,17 +46,12 @@ import { selectCurrentUser } from "./redux/user/user.selectors";
 
 const TeamPageWithSpinner = WithSpinner(TeamPage);
 const TournamentPageWithSpinner = WithSpinner(TournamentPage);
-const FieldSchedulerPageWithSpinner = WithSpinner(FieldSchedulerPage);
 const PreregistrationPageWithSpinner = WithSpinner(PreregistrationPage);
 const RegisteredPageWithSpinner = WithSpinner(RegisteredPage);
 const PreregisteredPageWithSpinner = WithSpinner(PreregisteredPage);
 const TeamRosterPageWithSpinner = WithSpinner(TeamRosterPage);
 const MembersOnlyPageWithSpinner = WithSpinner(MembersOnlyPage);
 const TrainerBioPageWithSpinner = WithSpinner(TrainerBioPage);
-
-
-
-
 
 class App extends React.Component {
   constructor() {
@@ -100,29 +91,6 @@ class App extends React.Component {
       }
     );
 
-    const { updateFields } = this.props;
-    const collectionRef2 = firestore.collection("fields");
-
-
-    this.unsubscribeFromSnapshot = collectionRef2.onSnapshot(
-      async (snapshot) => {
-        const fieldsMap = convertCollectionsSnapshotToMap2(snapshot);
-        updateFields(fieldsMap)
-        this.setState({ loading: false });
-      }
-    );
-
-    // const { updatePreregistration } = this.props;
-    // const collectionRef3 = firestore.collection("preregistration");
-
-    // this.unsubscribeFromSnapshot = collectionRef3.onSnapshot(
-    //   async (snapshot) => {
-    //     const preregistrationMap = convertCollectionsSnapshotToMap3(snapshot);
-    //     updatePreregistration(preregistrationMap)
-    //     this.setState({ loading: false });
-    //   }
-    // );
-    
     const { updateRegistered } = this.props;
     const collectionRef4 = firestore.collection("registered");
 
@@ -154,8 +122,8 @@ class App extends React.Component {
               (
               <TeamPageWithSpinner
                 isLoading={loading}
-                teamname="Team 1"
-                title="team1"
+                teamName="Team 1"
+                title="8U"
                 eventurls={Team1URLS} />
               
             ))}
@@ -166,8 +134,8 @@ class App extends React.Component {
                 (
                   <TeamPageWithSpinner
                     isLoading={loading}
-                    teamname="Team 2"
-                    title="team2"
+                    teamName="Team 2"
+                    title="10U"
                     eventurls={Team1URLS} />
                 ))}
             />
@@ -177,8 +145,8 @@ class App extends React.Component {
               (
                 <TeamPageWithSpinner
                   isLoading={loading}
-                  teamname="Team 3"
-                  title="team3"
+                  teamName="Team 3"
+                  title="12U"
                   eventurls={Team1URLS} />
               ))}
             />
@@ -188,8 +156,8 @@ class App extends React.Component {
               (
                 <TeamPageWithSpinner
                   isLoading={loading}
-                  teamname="Team 4"
-                  title="team4"
+                  teamName="Team 4"
+                  title="14U"
                   eventurls={Team1URLS} />
               ))}
             />
@@ -208,87 +176,37 @@ class App extends React.Component {
                 ))}
             />
             <Route
-              path="/Fire16UFamily"
+              path="/Team2Family"
               component={withRouter(() =>
                 (
                   <MembersOnlyPageWithSpinner
                     isLoading={loading}
-                    teamname="Fire 16U"
-                    title="Fire16U"
+                    teamname="Team 2"
+                    title="Team2"
                     index={0}/>
                 ))}
             />
             <Route
-              path="/Fire2007Family"
+              path="/Team3Family"
               component={withRouter(() =>
                 (
                   <MembersOnlyPageWithSpinner
                     isLoading={loading}
-                    teamname="Fire 2007"
-                    title="Fire2007"
-                    index={7}/>
-
+                    teamname="Team 3"
+                    title="Team3"
+                    index={1}/>
                 ))}
             />
             <Route
-              path="/Fire2008Family"
+              path="/Team4Family"
               component={withRouter(() =>
-              (
-                <MembersOnlyPageWithSpinner
-                  isLoading={loading}
-                  teamname="Fire 2008"
-                  title="Fire2008"
-                  index={2} />
-
-              ))}
-            />
-            <Route
-              path="/Fire2009Family"
-              component={withRouter(() =>
-              (
-                <MembersOnlyPageWithSpinner
-                  isLoading={loading}
-                  teamname="Fire 2009"
-                  title="Fire2009"
-                  index={6} />
-
-              ))}
-            />
-            <Route
-              path="/Fire2010Family"
-              component={withRouter(() =>
-              (
-                <MembersOnlyPageWithSpinner
-                  isLoading={loading}
-                  teamname="Fire 2010"
-                  title="Fire2010"
-                  index={4} />
-
-              ))}
-            />
-            <Route
-              path="/Fire2011Family"
-              component={withRouter(() =>
-              (
-                <MembersOnlyPageWithSpinner
-                  isLoading={loading}
-                  teamname="Fire 2011"
-                  title="Fire2011"
-                  index={3} />
-
-              ))}
-            />
-            <Route
-              path="/Fire2012Family"
-              component={withRouter(() =>
-              (
-                <MembersOnlyPageWithSpinner
-                  isLoading={loading}
-                  teamname="Fire 2012"
-                  title="Fire2012"
-                  index={5} />
-
-              ))}
+                (
+                  <MembersOnlyPageWithSpinner
+                    isLoading={loading}
+                    teamname="Team 4"
+                    title="Team4"
+                    index={2}/>
+                ))}
             />
           <Route path="/Preregistration" render={() => <PreregistrationPageWithSpinner isLoading={loading} />}
           />
@@ -318,39 +236,6 @@ class App extends React.Component {
             }
           />
           <Route
-            path="/Field1"
-            component={withRouter(() =>
-                (
-              <FieldSchedulerPageWithSpinner
-                isLoading={loading}
-                title="Field1"
-                fieldname="Field 1"
-              />
-            ))}
-          />
-          <Route
-            path="/Field2"
-            component={withRouter(() =>
-                (
-              <FieldSchedulerPageWithSpinner
-                isLoading={loading}
-                title="Field2"
-                fieldname="Field 2"
-              />
-            ))}
-          />
-          <Route
-            path="/Field3"
-            component={withRouter(() =>
-                (
-              <FieldSchedulerPageWithSpinner
-                isLoading={loading}
-                title="Field3"
-                fieldname="Field 3"
-              />
-            ))}
-          />
-          <Route
             path="/Preregistered"
             component={withRouter(() =>
               (
@@ -369,100 +254,52 @@ class App extends React.Component {
               ))}
           />
           <Route
-            path="/18URoster"
+            path="/Team1Roster"
             component={withRouter(() =>
               (
                 <TeamRosterPageWithSpinner
                   isLoading={loading}
-                  teamname="Fire 18U"
-                  title="Fire18U"
-                  index={1} />
-              ))}
-            />
-            <Route
-              path="/16URoster"
-              component={withRouter(() =>
-                (
-                  <TeamRosterPageWithSpinner
-                    isLoading={loading}
-                    teamname="Fire 16U"
-                    title="Fire16U"
-                    index={0} />
-
-                ))}
-            />
-            <Route
-              path="/2007Roster"
-              component={withRouter(() =>
-                (
-                  <TeamRosterPageWithSpinner
-                    isLoading={loading}
-                    teamname="Fire 2007"
-                    title="Fire2007"
-                    index={7} />
-
-                ))}
-            />
-            <Route
-              path="/2008Roster"
-              component={withRouter(() =>
-              (
-                <TeamRosterPageWithSpinner
-                  isLoading={loading}
-                  teamname="Fire 2008"
-                  title="Fire2008"
-                  index={2} />
-
-              ))}
-            />
-            <Route
-              path="/2010Roster"
-              component={withRouter(() =>
-              (
-                <TeamRosterPageWithSpinner
-                  isLoading={loading}
-                  teamname="Fire 2010"
-                  title="Fire2010"
-                  index={4} />
-
-              ))}
-            />
-            <Route
-              path="/2009Roster"
-              component={withRouter(() =>
-              (
-                <TeamRosterPageWithSpinner
-                  isLoading={loading}
-                  teamname="Fire 2009"
-                  title="Fire2009"
-                  index={6} />
-
-              ))}
-            />
-            <Route
-              path="/2011Roster"
-              component={withRouter(() =>
-              (
-                <TeamRosterPageWithSpinner
-                  isLoading={loading}
-                  teamname="Fire 2011"
-                  title="Fire2011"
+                  teamname="Team 1"
+                  title="8U"
                   index={3} />
-
               ))}
-            />
-            <Route
-              path="/2012Roster"
-              component={withRouter(() =>
+          />
+          <Route
+            path="/Team2Roster"
+            component={withRouter(() =>
               (
                 <TeamRosterPageWithSpinner
                   isLoading={loading}
-                  teamname="Fire 2012"
-                  title="Fire2012"
-                  index={5} />
+                  teamname="Team 2"
+                  title="10U"
+                  index={0} />
 
               ))}
-            />
+          />
+          <Route
+            path="/Team3Roster"
+            component={withRouter(() =>
+              (
+                <TeamRosterPageWithSpinner
+                  isLoading={loading}
+                  teamname="Team 3"
+                  title="12U"
+                  index={1} />
+
+              ))}
+          />
+          <Route
+            path="/Team4Roster"
+            component={withRouter(() =>
+            (
+              <TeamRosterPageWithSpinner
+                isLoading={loading}
+                teamname="Team 4"
+                title="14U8"
+                index={2} />
+
+            ))}
+          />
         </Switch>
         <Footer />
         </div>
@@ -478,8 +315,6 @@ const mapStateToProps = createStructuredSelector({
 const mapDispatchToProps = (dispatch) => ({
   setCurrentUser: (user) => dispatch(setCurrentUser(user)),
   updateTeams: (teamsMap) => dispatch(updateTeams(teamsMap)),
-  updateFields: (fieldsMap) => dispatch(updateFields(fieldsMap)),
-  updatePreregistration: (preregistrationMap) => dispatch(updatePreregistration(preregistrationMap)),
   updateRegistered: (registeredMap) => dispatch(updateRegistered(registeredMap)),
 });
 

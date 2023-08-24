@@ -8,9 +8,9 @@ const TryOutsStillNeed = () => {
       <Card style={{ backgroundColor: "#6c757d00", borderColor: "#6c757d00", width: '100vw' }}>
         <CardBody>
           <CardTitle className="tc f1" tag="h1">
-            Are you ready to play with FIRE?
+            Are you ready to play?
           </CardTitle>
-          <h3>FIRE FASTPITCH is looking for the following girls to complete our teams: </h3> <br />
+          <h3>Our Organization is looking for the following girls to complete our rosters: </h3> <br />
           <a href="Preregistration" rel="noopener noreferrer">
             <h2>Please fill out registration form here!</h2>
           </a>
@@ -23,18 +23,18 @@ const TryOutsStillNeed = () => {
           <h2>16U - PITCHER</h2>
           <br />
           <h3>LOCATION:</h3>
-          <a
+          {/* <a
             href={`https://goo.gl/maps/TSZ2T6Ti4oo`}
             rel="noopener noreferrer"
             target="_blank"
           >
             <h2>800 Gillmer Rd <br /> Leavittsbug Ohio 44430</h2>
-          </a>
+          </a> */}
           <br />
           <h3>If you or anyone you know is interested in discussing a coaching opportunity or would like to get a private tryout for your daughter please contact us here by PM or email at: </h3>
-          <h2>Fire.Fastpitch.Softball@gmail.com</h2>
+          <h2>organization@email.com</h2>
           <br />
-          <h2>or call 330-980-1366</h2>
+          <h2>or call XXX-XXX-XXXX</h2>
           <br />
         </CardBody>
       </Card>

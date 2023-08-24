@@ -4,7 +4,6 @@ import { withRouter } from "react-router-dom";
 import "./team.scss";
 
 const Team = ({ title, imageUrl, history, linkUrl, match }) => {
-  // const images = require.context("../../assets", true);
   let imgsrc = `${imageUrl}`;
   return (
     <div

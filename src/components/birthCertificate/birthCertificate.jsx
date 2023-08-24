@@ -5,7 +5,6 @@ import Modal from "../Modal/Modal";
 import {
   toggleBCModal,
 } from "../../redux/admin/admin.actions";
-// import "./birthCertificate.scss";
 
 const BirthCertificate = ({ toggleBCModal, bcShowing, playerIndex, teamDataArray, index }) => {
   

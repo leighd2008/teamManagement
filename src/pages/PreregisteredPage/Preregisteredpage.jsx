@@ -12,17 +12,17 @@ const RegisteredPage = () => {
       <NavLink exact to="/Registered" activeClassName="selected" title="Registered">
         <h4 class="tc">click here to view all registered players</h4>
       </NavLink>
-      <Registered index={2} division={'8U'} />
+      <Registered division={'8U'} />
       <br />
-      <Registered index={2} division={'10U'} />
+      <Registered division={'10U'} />
       <br />
-      <Registered index={2} division={'12U'} />
+      <Registered division={'12U'} />
       <br />
-      <Registered index={1} division={'14U'} />
+      <Registered division={'14U'} />
       <br />
-      <Registered index={4} division={'16U'} />
+      <Registered division={'16U'} />
       <br />
-      <Registered index={3} division={'18U'}/>
+      <Registered division={'18U'}/>
       <br />
     </div>
   );

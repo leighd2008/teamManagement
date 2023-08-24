@@ -8,9 +8,7 @@ import { Survey } from 'survey-react-ui';
 import { firestore } from "../../firebase/firebase.utils";
 
 import { createStructuredSelector } from "reselect";
-// import { selectRegistrationData } from "../../redux/registration/registration.selectors"
 import { selectRegisteredData } from "../../redux/registration/registration.selectors";
-
 
 import './preregistrationpage.scss'
 const currentMonth = new Date().getMonth
@@ -183,40 +181,6 @@ const surveyJson = {
           "max": `09/01/${currentYear - 6}`,
           "placeHolder": "mm/dd/yyyy"
         },
-        // {
-        //   "type": "html",
-        //   "name": "question10"
-        // },
-        // {
-        //   "type": "text",
-        //   "name": "email",
-        //   "title": "Player Email Address:",
-        //   "requiredErrorText": "Please enter a valid email address.",
-        //   "validators": [
-        //     {
-        //       "type": "email"
-        //     }
-        //   ],
-        //   "inputType": "email",
-        //   "size": 50,
-        //   "placeHolder": "player email is optional"
-        // },
-        // {
-        //   "type": "text",
-        //   "name": "phone",
-        //   "title": "Player Phone number:",
-        //   "requiredErrorText": "Please enter a valid phone number.",
-        //   "validators": [
-        //     {
-        //       "type": "numeric"
-        //     }
-        //   ],
-        //   "inputType": "tel",
-        //   "maxLength": 10,
-        //   "size": 50,
-        //   "placeHolder": "player phone number is optional"
-
-        // },
         {
           "type": "text",
           "name": "parent1",
@@ -351,7 +315,6 @@ const surveyJson = {
 
 function PreregistrationPage (allRegisteredData) {
   let registeredData = allRegisteredData.allRegisteredData
-  // let registrationData = allRegisteredData.preregistrationData
   
   const survey = new Model(surveyJson);
   
@@ -364,22 +327,13 @@ function PreregistrationPage (allRegisteredData) {
     let birthdate = new Date(player.DOB);
     player.year = birthdate.getYear() + 1900;
     
-    // let division = player.division;
-    
     // eslint-disable-next-line no-restricted-globals
     if (confirm(`Please check your answers and click OK to proceed or Cancel to start over! \n name: ${player.name} ${player.last} \n    travel experience: ${player.experience} years \n ${player.previous ? `previous teams: ${player.previous} \n` : ""} positions: ${player.positions} \n throws: ${player.throws} handed \n bats: ${player.bats} handed \n division: ${player.division} \n DOB: ${player.DOB} \n ${player.email ? `email: ${player.email} \n` : ""} ${player.phone ? `phone: ${player.phone} \n` : ""} parent/guardians: ${player.parent1} phone: ${player.parent1phone} email: ${player.parent1email} \n ${player.parent2 ? `${player.parent2} phone: ${player.parent2phone} email: ${player.parent2email} \n` : ""} tryout session: ${player.session}`)) {
-      // let newplayers = [
-      //   player,
-      //   ...registrationData[division].players
-      // ];
       let newplayers2 = [
         player,
         ...registeredData.Registered.players
       ];
-      // const divisionId = registrationData[division].id;
-      // firestore.collection("preregistration").doc(registrationData[division].id).update({
-      //   players: newplayers,
-      // });
+      
       const ID = registeredData.Registered.id;
       firestore.collection("registered").doc(ID).update({
         players: newplayers2,
@@ -397,7 +351,7 @@ function PreregistrationPage (allRegisteredData) {
   survey.onComplete.add(surveyComplete)
   return (
     <div className='survey'>
-      <Survey model={survey} /*onComplete={this.onComplete}*/></Survey>
+      <Survey model={survey} ></Survey>
       <span> * indicates required field</span>
     </div>
   )
@@ -405,7 +359,6 @@ function PreregistrationPage (allRegisteredData) {
 
 const mapStateToProps = createStructuredSelector({
   allRegisteredData: selectRegisteredData,
-  // preregistrationData: selectRegistrationData
 })
 
 export default connect(mapStateToProps)(PreregistrationPage);
