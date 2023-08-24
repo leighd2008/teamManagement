@@ -37,10 +37,10 @@ const CoachesContact = ({ teamData }) => {
             )
           })}
           <tr>
-            <td>Treasurer</td>
-            <td className="coach">Zack Cutter</td>
-            <td>(330) 282-2210</td>
-            <td className="email">fire.fastpitch.treasurer@gmail.com</td>
+            <td>Other organization personnel</td>
+            <td className="coach">Someone's Name</td>
+            <td>(XXX) XXX-XXXX</td>
+            <td className="email">organization@email.com</td>
           </tr>
         </tbody>
       </table>

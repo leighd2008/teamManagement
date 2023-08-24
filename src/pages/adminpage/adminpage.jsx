@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 import SignInPage from "../sign-inpage/sign-inpage";
 import HomePage from "../homepage/homepage";
-// import CoachesContact from "../../components/coachesContact/coachesContact";
+import CoachesContact from "../../components/coachesContact/coachesContact";
 import ResetTournaments from "../../components/resetTournaments/resetTournaments";
 
 
@@ -19,15 +19,6 @@ const AdminPage = ({ currentUser }) => {
           <div className="adminPage">
             <div className='adminLinks'>
               <div className="links">
-                <NavLink exact to="/Field1" activeClassName="selected" title="Field 1">
-                  <h4>Field 1 Scheduling</h4>
-                </NavLink>
-                <NavLink exact to="/Field2" activeClassName="selected" title="Field 2">
-                  <h4>Field 2 Scheduling</h4>
-                </NavLink>
-                <NavLink exact to="/Field3" activeClassName="selected" title="Field 3">
-                  <h4>Field 3 Scheduling</h4>
-                </NavLink>
                 <NavLink exact to="/Preregistered" activeClassName="selected" title="Registered">
                   <h4>2022 Registered Players</h4>
                 </NavLink>
@@ -48,7 +39,7 @@ const AdminPage = ({ currentUser }) => {
                 </NavLink>
               </div>
             </div>
-            {/* <CoachesContact /> */}
+            <CoachesContact />
           </div>
           {currentUser.role === "admin" ?
             <ResetTournaments/> 
